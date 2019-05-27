@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$article['at_title']}__{$catecate['cate_name']}_{$opres['webname']}</title>
+    <meta name="keywords" content="{$opres['keywords']}" />
+    <meta name="description" content="{$opres['description']}"/>
+
+<meta name="Author" content="024" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+    <script type="text/javascript" src="{$Think.config.__STATIC__}/index/style/urlredirect.js"></script>
+    <LINK href="{$Think.config.__STATIC__}/index/style/style.css" rel=stylesheet>
+    <LINK href="{$Think.config.__STATIC__}/index/style/jbox.css" rel=stylesheet>
+    <script language="JavaScript" type="text/javascript" src="{$Think.config.__STATIC__}/index/style/jquery.js"></script>
+    <script language="JavaScript" type="text/javascript" src="{$Think.config.__STATIC__}/index/style/functions.js"></script>
+    <script language="JavaScript" type="text/javascript" src="{$Think.config.__STATIC__}/index/style/validForm/FormValid.js"></script>
+    <script language="JavaScript" type="text/javascript" src="{$Think.config.__STATIC__}/index/style/jbox/jquery.jBox-2.3.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="{$Think.config.__STATIC__}/index/style/search.js"></script>
+    <script language="JavaScript" type="text/javascript" src="{$Think.config.__STATIC__}/index/style/menu.js"></script>
+    <script language="JavaScript" type="text/javascript" src="{$Think.config.__STATIC__}/index/style/jQselect.js"></script>
+    <script language="JavaScript" type="text/javascript" src="{$Think.config.__STATIC__}/index/style/slides.min.jquery.js"></script>
+    <script language="JavaScript" type="text/javascript" src="{$Think.config.__STATIC__}/index/style/jquery.touchSlider.js"></script><script language="JavaScript" type="text/javascript" src="./style/jquery.touchSlider.js"></script>
+<script type="text/javascript"><!--ibanner-->
+
+$(document).ready(function () {
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+		},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+		})
+	$dragBln = false;
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e) {
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	})
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	})
+	$(".main_image a").click(function() {
+		if($dragBln) {
+			return false;
+		}
+	})
+	timer = setInterval(function() { $("#btn_next").click();}, 5000);
+	$(".main_visual").hover(function() {
+		clearInterval(timer);
+	}, function() {
+		timer = setInterval(function() { $("#btn_next").click();}, 5000);
+	})
+	$(".main_image").bind("touchstart", function() {
+		clearInterval(timer);
+	}).bind("touchend", function() {
+		timer = setInterval(function() { $("#btn_next").click();}, 5000);
+	})
+});
+</script>
+<script><!--pro-->
+		$(function(){
+			// Set starting slide to 1
+			var startSlide = 1;
+			// Get slide number if it exists
+			if (window.location.hash) {
+				startSlide = window.location.hash.replace('#','');
+			}
+			// Initialize Slides
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				generatePagination: true,
+				play: 0,
+				pause: 2500,
+				hoverPause: true,
+				// Get the starting slide
+				start: startSlide,
+				animationComplete: function(current){
+					// Set the slide number as a hash
+					//window.location.hash = '#' + current;
+				}
+			});
+		});
+</script>
+<!--[if IE 6]><script type="text/javascript" src="js/DD_belatedPNG.js"></script><![endif]-->
+</head>
+<body>
+{include file="common/head"}
+<script src="js/fy.js"></script>
+<div class="fy" style=" background:url({$Think.config.__STATIC__}/index/images/20150804113438-369103644.jpg) center top no-repeat;">
+    	<div class="fra">
+            {include file="common/left"}
+        <div class="fyRight">
+        		 <div class="aaleft" >
+						<div class="aaleft_kk" id="fix">
+                            {if($prv)!=null}
+                            <a class="fy-left" href="{:url('article/index',['at_id'=>$prv['at_id'],'cate_id'=>$catecate['cate_id']])}" title="{$prv['at_title']}">上<br />一<br />篇</a>
+                        {/if}</div>
+                   </div>  
+                  
+                <div class="aaleft1" >
+            
+						<div class="aaleft_kk" id="fix1">
+                            {if($next)!=null}
+                            <a class="fy-right" href="{:url('article/index',['at_id'=>$next['at_id'],'cate_id'=>$catecate['cate_id']])}" title="{$prv['at_title']}">下<br />一<br />篇</a>
+                        {/if}
+                        </div>
+                   </div>
+      			<div class="title"> <span class="fl"> {$catecate['cate_name']}</span> <span class="fr">当前位置：<a href="{$Think.config.WEBURL}" title="首页">首页</a> > <a href="{:url('cate/index',['cate_id'=>$catecate['cate_id']])}" title="{$catecate['cate_name']}">{$catecate['cate_name']}</a> > <font>{$article['at_title']}</font> </span></div>
+				<div class="padding25">
+                    <h2 class="center">{$article['at_title']}</h2>
+                    <p class="title_s">文章来源：{$article['at_author']}&nbsp;&nbsp;&nbsp;&nbsp;时间：{$article['at_date']|date="Y-m-d"}</p>
+
+
+                    <div class="newsview">
+                     
+                     <div class='pb'>
+
+
+                         <div class='pagebox'>
+                             {php}
+                             echo html_entity_decode($article['at_content']);
+                             {/php}
+                         </div>
+
+
+                     </div></div>
+                    
+                    <a href="{:url('cate/index',['cate_id'=>$catecate['cate_id']])}" class="returnlist" title="返回列表">返回列表</a> </div>
+    			
+  			</div>
+    	</div>
+</div>
+<div class="clear"></div>
+{include file="common/footer"}
+
+    </body>
+</html>
+
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>配置管理-企业后台</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="{$Think.config.__STATIC__}/admin/style/bootstrap.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/font-awesome.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="{$Think.config.__STATIC__}/admin/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="{$Think.config.__STATIC__}/admin/style/demo.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/typicons.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/animate.css" rel="stylesheet">
+
+    <!--百度编辑器-->
+    <script type="text/javascript" src="{$Think.config.__STATIC__}/admin/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="{$Think.config.__STATIC__}/admin/ueditor/ueditor.all.min.js"></script>
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/head"}
+
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+           {include file="common/left"}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="#">系统</a>
+                    </li>
+                                        <li>
+                        <a href="#">配置理</a>
+                    </li>
+                                        <li class="active">添加配置</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <form class="form-horizontal" role="form" action="" method="post">
+            <div class="widget-main ">
+                <div class="tabbable">
+                    <ul class="nav nav-tabs tabs-flat" id="myTab11">
+                        <li class="active">
+                            <a data-toggle="tab" href="#home11">
+                               添加配置
+                            </a>
+                        </li>
+                       
+                    </ul>
+                    <div class="tab-content tabs-flat">
+                        <div id="home11" class="tab-pane active">
+                            <div class="widget-body">
+                                <div id="horizontal-form">
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">配置中文名称</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control"  placeholder="" name="cf_cname" required="" type="text">
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+                                         <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">配置英文名称</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control"  placeholder="" name="cf_ename" required="" type="text">
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">配置值</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control"  placeholder="" name="cf_value" required="" type="text">
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+                                         <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">配置可选值</label>
+                                            <div class="col-sm-6">
+                                                <textarea name="cf_values" cols="110" rows="5"></textarea>
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">配置所属项</label>
+                                            <div class="col-sm-6">
+                                                <select name="cf_type" style="width: 100%;">
+                                                    <option selected="selected" value="1">基本配置</option>
+                                                    <option  value="2">联系方式</option>
+                                                    <option  value="3">SEO配置</option>                                                   
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">显示类型</label>
+                                            <div class="col-sm-6">
+                                                <select name="dt_type" style="width: 100%;">
+                                                    <option selected="selected" value="1">文本框</option>
+                                                    <option  value="2">文本域</option>
+                                                    <option  value="3">下拉菜单</option>
+                                                    <option  value="4">复选框</option>
+                                                    <option  value="5">单选框</option>
+                                                    <option  value="6">附件</option>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                     
+
+                                      
+
+                                    
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">保存信息</button>
+                </div>
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+    <script src="{$Think.config.__STATIC__}/admin/style/jquery_002.js"></script>
+    <script src="{$Think.config.__STATIC__}/admin/style/bootstrap.js"></script>
+    <script src="{$Think.config.__STATIC__}/admin/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="{$Think.config.__STATIC__}/admin/style/beyond.js"></script>
+
+    <script type="text/javascript">
+        UE.getEditor('cate_content',{    //content为要编辑的textarea的id
+            initialFrameWidth: 900,   //初始化宽度
+            initialFrameHeight: 500,   //初始化高度
+        });
+    </script>
+
+
+</body></html>

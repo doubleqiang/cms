@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>配置列表-后台管理</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="{$Think.config.__STATIC__}/admin/style/bootstrap.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/font-awesome.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="{$Think.config.__STATIC__}/admin/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="{$Think.config.__STATIC__}/admin/style/demo.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/typicons.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/head"}
+
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+            {include file="common/left"}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="#">系统</a>
+                    </li>
+                                        <li class="active">配置管理</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+<form action=""  method="post">
+<button type="button" tooltip="添加栏目" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = 'add'"> <i class="fa fa-plus"></i> Add
+</button>
+    <input type="submit" value="栏目排序" class="btn btn-sm btn-azure btn-addon" />
+
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">配置中文名称</th>
+                                <th class="text-center">配置英文名称</th>
+                                <th class="text-center">配置可选值</th>
+                                <th class="text-center">配置选中值</th>
+                                <th class="text-center">配置类型</th>
+                                <th class="text-center">配置所属项</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="cateres" id="vo"}
+                                                        <tr>
+                                <td align="center">{$vo['cate_id']}</td>
+                                <td align="left">{if($vo['cate_pid']!=0)}L----{/if}{$vo['cate_name']}</td>
+
+                                 <td align="center">
+                                     {switch $vo['cate_type']}
+                                     {case 1}新闻列表{/case}
+                                     {case 2}封面{/case}
+                                     {case 3}招聘{/case}
+                                     {case 4}荣誉{/case}
+                                     {case 5}留言{/case}
+                                     {case 6}商品列表{/case}
+                                     {default /}无
+                                     {/switch}
+                                 </td>
+                                  <td align="center">{if($vo['cate_pc']==1)}PC{/if}{if($vo['cate_mobile']==1)}手机{/if}</td>
+                                                            
+                                    <td align="center">{if($vo['cate_pc']==1)}PC{/if}{if($vo['cate_mobile']==1)}手机{/if}</td>
+                                         <td align="center">配置类型</td>
+                                         <td align="center">配置所属项目</td>                  
+                                <td align="center">
+                                    <a href="edit?cate_id={$vo['cate_id']}" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', 'del?cate_id={$vo['cate_id']}')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                        {/volist}
+
+
+                                                    </tbody>
+                    </table>
+                </div>
+                <div>
+                	                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+    <script src="{$Think.config.__STATIC__}/admin/style/jquery_002.js"></script>
+    <script src="{$Think.config.__STATIC__}/admin/style/bootstrap.js"></script>
+    <script src="{$Think.config.__STATIC__}/admin/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="{$Think.config.__STATIC__}/admin/style/beyond.js"></script>
+    
+
+
+</body></html>
