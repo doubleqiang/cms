@@ -21,5 +21,20 @@ class Config extends Model
 		}
     }
 
+public function edit($data)
+    {
+      $config=validate('Config');		
+        if($config->check($data)){
+			
+			if($this->save($data,$data['cf_id'])){
+				return ['valid'=>1,'msg'=>'配置修改成功！'];
+			}else{
+				return ['valid'=>0,'msg'=>'配置修改失败！'];
+			}
+		}else{
+			return ['valid'=>0,'msg'=>$config->getError()];
+		}
+    }
+
    
 }

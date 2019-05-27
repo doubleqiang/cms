@@ -15,9 +15,7 @@ class Config extends Validate
         'cf_cname.require' => '请输入配置中文名称',
         'cf_ename.require' => '请输入配置英文名称',
         'cf_cname.unique' => '该配置已存在',
-        'cf_ename.unique' => '该配置已存在',
-
-		
+        'cf_ename.unique' => '该配置已存在',		
        
     ];
     
