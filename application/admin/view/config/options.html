@@ -56,7 +56,7 @@
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
-            <form class="form-horizontal" role="form" action="" method="post">
+            <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
             <div class="widget-main ">
                 <div class="tabbable">
                     <ul class="nav nav-tabs tabs-flat" id="myTab11">
@@ -67,167 +67,375 @@
                         </li>
                         <li class="">
                             <a data-toggle="tab" href="#profile11">
-                               附件配置
+                               联系方式
                             </a>
                         </li>
                         <li class="">
                             <a data-toggle="tab" href="#profile12">
-                                其它配置
+                                SEO配置
                             </a>
                         </li>
                     </ul>
                     <div class="tab-content tabs-flat">
+
+                        
                         <div id="home11" class="tab-pane active">
                             <div class="widget-body">
                                 <div id="horizontal-form">
-
+                                    {volist name="conres" id="vo"}
+                                    {if($vo['cf_type']==1)}
+                                   {switch $vo['dt_type']}
+                                   {case 1}
                                         <div class="form-group">
-                                            <label  class="col-sm-2 control-label no-padding-right">栏目名称</label>
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
                                             <div class="col-sm-6">
-                                                <input class="form-control"  placeholder="" name="cate_name" required="" type="text">
+                                                <input class="form-control"  value="{$vo['cf_value']}" name="{$vo['cf_ename']}" required="" type="text">
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
-
-
-
-                                        <div class="form-group">
-                                            <label  class="col-sm-2 control-label no-padding-right">上级栏目</label>
+                                    {/case}
+                                    {case 2}
+                                     <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
                                             <div class="col-sm-6">
-                                                <select name="cate_pid" style="width: 100%;">
-                                                    <option selected="selected" value="0">请选择</option>
+                                                <textarea name="{$vo['cf_ename']}" cols="110" rows="5">{$vo['cf_value']}</textarea>
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                    {/case}
+                                    {case 3}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <select name="{$vo['cf_ename']}" style="width: 100%;">
+                                                    <option selected="selected" value="">请选择</option>
+                                                    {php}
+                                                    $arr=explode(',',$vo['cf_values']);                                                    
+                                                    foreach($arr as $v){
+                                                    echo "<option ";
+                                                    if($vo['cf_value']==$v){echo "selected=selected";}
+                                                    echo " value='".$v."'>".$v."</option>";
+                                                   
+                                                }
                                                     
+                                                    {/php}
                                                 </select>
                                             </div>
                                         </div>
-
-                                        <div class="form-group">
-                                            <label  class="col-sm-2 control-label no-padding-right">栏目类型</label>
-                                            <div class="col-sm-1">
-
-                                                <div class="radio">
-                                                    <label>
-                                                        <input name="cate_type" value="1" class="inverted" type="radio" checked="checked">
-                                                        <span class="text">新闻列表</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-1">
-
-                                                <div class="radio">
-                                                    <label>
-                                                        <input name="cate_type" value="6" class="inverted" type="radio">
-                                                        <span class="text">商品列表</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-1">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input name="cate_type" value="2" type="radio" class="inverted">
-                                                        <span class="text">封面</span>
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm-1">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input name="cate_type" value="3" type="radio" class="inverted">
-                                                        <span class="text">招聘</span>
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm-1">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input name="cate_type" value="4" type="radio" class="inverted">
-                                                        <span class="text">荣誉</span>
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm-1">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input name="cate_type" value="5" type="radio" class="inverted">
-                                                        <span class="text">留言</span>
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <p class="help-block col-sm-4 red">* 必填</p>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label  class="col-sm-2 control-label no-padding-right">显示</label>
-                                            <div class="col-sm-3">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input name="cate_pc" value="1" type="checkbox" checked="checked">
-                                                        <span class="text">PC</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input name="cate_mobile" value="1" type="checkbox">
-                                                        <span class="text">手机</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <p class="help-block col-sm-4 red">* 必填</p>
-                                        </div>
-
+                                    {/case}
+                                    {case 4}
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label no-padding-right">是否展示</label>
-                                        <div class="col-sm-1">
-                                            <div class="radio">
-                                                <label>
-                                                    <input name="cate_ison" value="1" type="radio" checked="checked" class="inverted">
-                                                    <span class="text">是</span>
-                                                </label>
-                                            </div>
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            {php}
+                                                    $arr=explode(',',$vo['cf_values']);   
+                                                    $arr2=explode(',',$vo['cf_value']);                                                  
+                                                    foreach($arr as $v){                                                  
+                                                  
+                                                    
+                                           echo "<div class='col-sm-1'>
+                                                <div class='checkbox'>
+                                                    <label>
+                                                        <input name='$vo[cf_ename][]' value='".$v."' type='checkbox' ";
+                                              foreach($arr2 as $v2){
+                                              if($v==$v2){echo "checked=checked"; }
+                                          }
 
-                                        </div>
-                                        <div class="col-sm-1">
-                                            <div class="radio">
-                                                <label>
-                                                    <input name="cate_ison" value="0" type="radio" class="inverted">
-                                                    <span class="text">否</span>
-                                                </label>
-                                            </div>
+                                                        echo ">
+                                                        <span class='text'>".$v."</span>
+                                                    </label>
+                                                </div>
+                                            </div>";
+                                            }
+                                                  
+                                          {/php}
 
+                                            
+                                            <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
-                                        <p class="help-block col-sm-4 red">* 必填</p>
-                                    </div>
+
+                                    
+                                    {/case}
+                                    {case 5}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            {php}
+                                                    $arr=explode(',',$vo['cf_values']);                                                    
+                                                    foreach($arr as $v){
+                                            echo "<div class='col-sm-1'>
+                                                <div class='radio'>
+                                                    <label>
+                                                        <input name='$vo[cf_ename]' value='".$v."' class='inverted' type='radio'";
+                                                         if($v==$vo['cf_value']){echo "checked='checked'";}
+                                                        echo ">
+                                                        <span class='text'>".$v."</span>
+                                                    </label>
+                                                </div>
+                                            </div>";
+                                            }
+                                                  
+                                          {/php}
+                                                                                 
+                                            
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                    {/case}
+                                    {case 6}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <input name="{$vo['cf_ename']}" type="file" />
+                                                {if($vo['cf_value']!='')}
+                                                <img src="http://127.0.0.1/cms/public{$vo['cf_value']}" width="80px" height="80px">
+                                                {/if}
+                                            </div>
+                                        </div>
+                                    {/case}
+                                        {/switch}
+                                         {/if}
+                                        {/volist}                               
+
+                                        
+                                   
 
 
                                 </div>
                             </div>
                         </div>
+                       
 
+                        
                         <div id="profile11" class="tab-pane">
-                           <textarea id="cate_content" name="cate_content"></textarea>
+                           {volist name="conres" id="vo"}
+                                    {if($vo['cf_type']==2)}
+                                   {switch $vo['dt_type']}
+                                   {case 1}
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control"  value="{$vo['cf_value']}" name="{$vo['cf_ename']}" required="" type="text">
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                    {/case}
+                                    {case 2}
+                                     <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <textarea name="{$vo['cf_ename']}" cols="110" rows="5">{$vo['cf_value']}</textarea>
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                    {/case}
+                                    {case 3}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <select name="{$vo['cf_ename']}" style="width: 100%;">
+                                                    <option selected="selected" value="">请选择</option>
+                                                    {php}
+                                                    $arr=explode(',',$vo['cf_values']);                                                    
+                                                    foreach($arr as $v){
+                                                    echo "<option ";
+                                                    if($vo['cf_value']==$v){echo "selected=selected";}
+                                                    echo " value='".$v."'>".$v."</option>";
+                                                   
+                                                }
+                                                    
+                                                    {/php}
+                                                </select>
+                                            </div>
+                                        </div>
+                                    {/case}
+                                    {case 4}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            {php}
+                                                    $arr=explode(',',$vo['cf_values']);   
+                                                    $arr2=explode(',',$vo['cf_value']);                                                  
+                                                    foreach($arr as $v){                                                  
+                                                  
+                                                    
+                                           echo "<div class='col-sm-1'>
+                                                <div class='checkbox'>
+                                                    <label>
+                                                        <input name='$vo[cf_ename][]' value='".$v."' type='checkbox' ";
+                                              foreach($arr2 as $v2){
+                                              if($v==$v2){echo "checked=checked"; }
+                                          }
+
+                                                        echo ">
+                                                        <span class='text'>".$v."</span>
+                                                    </label>
+                                                </div>
+                                            </div>";
+                                            }
+                                                  
+                                          {/php}
+
+                                            
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+                                    
+                                    {/case}
+                                    {case 5}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            {php}
+                                                    $arr=explode(',',$vo['cf_values']);                                                    
+                                                    foreach($arr as $v){
+                                            echo "<div class='col-sm-1'>
+                                                <div class='radio'>
+                                                    <label>
+                                                        <input name='$vo[cf_ename]' value='".$v."' class='inverted' type='radio'";
+                                                         if($v==$vo['cf_value']){echo "checked='checked'";}
+                                                        echo ">
+                                                        <span class='text'>".$v."</span>
+                                                    </label>
+                                                </div>
+                                            </div>";
+                                            }
+                                                  
+                                          {/php}
+                                                                                 
+                                            
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                    {/case}
+                                    {case 6}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <input name="{$vo['cf_ename']}" type="file" />
+                                                {if($vo['cf_value']!='')}
+                                                <img src="http://127.0.0.1/cms/public{$vo['cf_value']}" width="80px" height="80px">
+                                                {/if}
+                                            </div>
+                                        </div>
+                                    {/case}
+                                        {/switch}
+                                         {/if}
+                                        {/volist}             
                         </div>
+                        
+                        
                         <div id="profile12" class="tab-pane">
-                            <div class="form-group">
-                                <label  class="col-sm-2 control-label no-padding-right">栏目模板</label>
-                                <div class="col-sm-6">
-                                    <input class="form-control"  placeholder="" name="cate_muban" required="" value="index" type="text">
-                                </div>
-                                <p class="help-block col-sm-4 red">* 必填</p>
-                            </div>
-                            <div class="form-group">
-                                <label  class="col-sm-2 control-label no-padding-right">文章页模板</label>
-                                <div class="col-sm-6">
-                                    <input class="form-control"  placeholder="" name="at_muban" value="index" required="" type="text">
-                                </div>
-                                <p class="help-block col-sm-4 red">* 必填</p>
-                            </div>
+                            {volist name="conres" id="vo"}
+                                    {if($vo['cf_type']==3)}
+                                   {switch $vo['dt_type']}
+                                   {case 1}
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control"  value="{$vo['cf_value']}" name="{$vo['cf_ename']}" required="" type="text">
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                    {/case}
+                                    {case 2}
+                                     <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <textarea name="{$vo['cf_ename']}" cols="110" rows="5">{$vo['cf_value']}</textarea>
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                    {/case}
+                                    {case 3}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <select name="{$vo['cf_ename']}" style="width: 100%;">
+                                                    <option selected="selected" value="">请选择</option>
+                                                    {php}
+                                                    $arr=explode(',',$vo['cf_values']);                                                    
+                                                    foreach($arr as $v){
+                                                    echo "<option ";
+                                                    if($vo['cf_value']==$v){echo "selected=selected";}
+                                                    echo " value='".$v."'>".$v."</option>";
+                                                   
+                                                }
+                                                    
+                                                    {/php}
+                                                </select>
+                                            </div>
+                                        </div>
+                                    {/case}
+                                    {case 4}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            {php}
+                                                    $arr=explode(',',$vo['cf_values']);   
+                                                    $arr2=explode(',',$vo['cf_value']);                                                  
+                                                    foreach($arr as $v){                                                  
+                                                  
+                                                    
+                                           echo "<div class='col-sm-1'>
+                                                <div class='checkbox'>
+                                                    <label>
+                                                        <input name='$vo[cf_ename][]' value='".$v."' type='checkbox' ";
+                                              foreach($arr2 as $v2){
+                                              if($v==$v2){echo "checked=checked"; }
+                                          }
+
+                                                        echo ">
+                                                        <span class='text'>".$v."</span>
+                                                    </label>
+                                                </div>
+                                            </div>";
+                                            }
+                                                  
+                                          {/php}
+
+                                            
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+                                    
+                                    {/case}
+                                    {case 5}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            {php}
+                                                    $arr=explode(',',$vo['cf_values']);                                                    
+                                                    foreach($arr as $v){
+                                            echo "<div class='col-sm-1'>
+                                                <div class='radio'>
+                                                    <label>
+                                                        <input name='$vo[cf_ename]' value='".$v."' class='inverted' type='radio'";
+                                                         if($v==$vo['cf_value']){echo "checked='checked'";}
+                                                        echo ">
+                                                        <span class='text'>".$v."</span>
+                                                    </label>
+                                                </div>
+                                            </div>";
+                                            }
+                                                  
+                                          {/php}
+                                                                                 
+                                            
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                    {/case}
+                                    {case 6}
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">{$vo['cf_cname']}</label>
+                                            <div class="col-sm-6">
+                                                <input name="{$vo['cf_ename']}" type="file" />
+                                                {if($vo['cf_value']!='')}
+                                                <img src="http://127.0.0.1/cms/public{$vo['cf_value']}" width="80px" height="80px">
+                                                {/if}
+                                            </div>
+                                        </div>
+                                    {/case}
+                                        {/switch}
+                                         {/if}
+                                        {/volist}             
                         </div>
+                        
+
+
+
                     </div>
                 </div>
             </div>

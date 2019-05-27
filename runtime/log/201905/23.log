@@ -1,0 +1,488 @@
+---------------------------------------------------------------
+[2019-05-23T13:11:32+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/index/index
+[运行时间：0.129000s] [吞吐率：7.75req/s] [内存消耗：304.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-05-23T13:20:38+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/index/index
+[运行时间：0.118000s] [吞吐率：8.47req/s] [内存消耗：259.53kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T13:21:34+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/index/index
+[运行时间：0.084000s] [吞吐率：11.90req/s] [内存消耗：238.41kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T13:21:37+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/index/index
+[运行时间：0.076000s] [吞吐率：13.16req/s] [内存消耗：238.50kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T13:21:39+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/index/index
+[运行时间：0.089000s] [吞吐率：11.24req/s] [内存消耗：238.77kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T13:21:39+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[运行时间：0.052000s] [吞吐率：19.23req/s] [内存消耗：136.45kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-05-23T13:23:19+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/index/index
+[运行时间：0.097000s] [吞吐率：10.31req/s] [内存消耗：258.48kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T13:40:22+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/index/index
+[运行时间：0.102000s] [吞吐率：9.80req/s] [内存消耗：258.48kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T13:41:21+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/lst.html
+[运行时间：0.129000s] [吞吐率：7.75req/s] [内存消耗：261.18kb] [文件加载：69]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'referer' => 'http://127.0.0.1/cms/public/index.php/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\lst.html [ array (
+) ]
+[ error ] [8]未定义变量: cateres[D:\wamp\www\cms\runtime\temp\2f25cec6d65a471b26a516c1b81f7c82.php:274]
+---------------------------------------------------------------
+[2019-05-23T14:02:58+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/index/index
+[运行时间：0.103000s] [吞吐率：9.71req/s] [内存消耗：238.41kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T14:03:01+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.083000s] [吞吐率：12.05req/s] [内存消耗：224.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'referer' => 'http://127.0.0.1/cms/public/index.php/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-05-23T14:03:24+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.077000s] [吞吐率：12.99req/s] [内存消耗：224.30kb] [文件加载：63]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'referer' => 'http://127.0.0.1/cms/public/index.php/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-05-23T14:03:26+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.072000s] [吞吐率：13.89req/s] [内存消耗：223.60kb] [文件加载：63]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-05-23T14:03:27+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.072000s] [吞吐率：13.89req/s] [内存消耗：223.60kb] [文件加载：63]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-05-23T14:03:44+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.075000s] [吞吐率：13.33req/s] [内存消耗：224.13kb] [文件加载：63]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-05-23T14:04:01+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.080000s] [吞吐率：12.50req/s] [内存消耗：223.60kb] [文件加载：63]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-05-23T14:04:02+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.163000s] [吞吐率：6.13req/s] [内存消耗：299.84kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\options.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T14:04:02+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[运行时间：0.051000s] [吞吐率：19.61req/s] [内存消耗：135.27kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-05-23T14:05:14+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.082000s] [吞吐率：12.20req/s] [内存消耗：254.50kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\options.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T14:05:17+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.080000s] [吞吐率：12.50req/s] [内存消耗：254.19kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\options.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T14:05:19+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.071000s] [吞吐率：14.08req/s] [内存消耗：254.59kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\options.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T14:05:19+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[运行时间：0.068000s] [吞吐率：14.71req/s] [内存消耗：135.27kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-05-23T14:06:06+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.092000s] [吞吐率：10.87req/s] [内存消耗：299.26kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\options.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T14:06:09+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.081000s] [吞吐率：12.35req/s] [内存消耗：254.19kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\options.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T14:06:12+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.075000s] [吞吐率：13.33req/s] [内存消耗：254.59kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\options.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T14:06:12+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[运行时间：0.063000s] [吞吐率：15.87req/s] [内存消耗：135.27kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-05-23T14:06:34+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.082000s] [吞吐率：12.20req/s] [内存消耗：254.50kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\options.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-23T14:07:43+08:00] 127.0.0.1 GET 127.0.0.1/cms/public/index.php/admin/config/options.html
+[运行时间：0.104000s] [吞吐率：9.62req/s] [内存消耗：299.57kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp\www\cms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\cms\application\admin\view\config\options.html [ array (
+) ]
