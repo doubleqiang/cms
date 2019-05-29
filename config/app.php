@@ -146,4 +146,7 @@ return [
 	//静态资源路径
 	'__STATIC__'=>'http://127.0.0.1/cms/public/static',
 
+    //项目绝对路径
+    'cmspath'=>dirname(__DIR__).'\public',
+
 ];

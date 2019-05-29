@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>栏目管理-企业后台</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="{$Think.config.__STATIC__}/admin/style/bootstrap.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/font-awesome.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="{$Think.config.__STATIC__}/admin/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="{$Think.config.__STATIC__}/admin/style/demo.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/typicons.css" rel="stylesheet">
+    <link href="{$Think.config.__STATIC__}/admin/style/animate.css" rel="stylesheet">
+<script src="{$Think.config.__STATIC__}/admin/style/jquery_002.js"></script>
+    <!--uploadify-->
+   <link href="{$Think.config.__STATIC__}/admin/plus/uploadify/uploadify.css" rel="stylesheet">   
+   <script type="text/javascript" src="{$Think.config.__STATIC__}/admin/plus/uploadify/jquery.uploadify.min.js"></script>
+   <script type="text/javascript">
+    $(function() {
+        $('#uploadify').uploadify({
+            //指定swf地址
+            'swf'      : '{$Think.config.__STATIC__}/admin/plus/uploadify/uploadify.swf',
+            //上传后端处理方法
+            'uploader' : "{:url('cate/uploadify')}",
+            'progressData':'speed',
+            //按钮文字
+            'buttonText':'上传图片',
+            //按钮样式
+            'buttonClass':'btn btn-azure',
+            //上传文件类型
+            'fileTypeDesc':'Image Files',
+            //设置发送数据文本框的name值
+            'fileObjName':'cate_img',
+            //上传成功后回调函数
+            'onUploadSuccess':function(file,data,response){
+                
+                var html="<img src='http://127.0.0.1/cms/public" + data + "' width='80px' height='80px'/>&nbsp;&nbsp;<a class='btn btn-azure' onclick='delimg(this)'>撤销</a>"
+                
+                 $("#cate_img").html(html);
+                 $("#hidden_img").val(data);
+            }
+            // Your options here
+        });
+        $("#uploadify-button").removeAttr('style');
+        $("#uploadify-button").attr("class","btn btn-azure");
+    });
+
+    function delimg(o){
+         
+         var imgurl=$("#hidden_img").val();
+         console.log(imgurl)         
+          $.ajax({
+                type:"post",
+                dataType:"json",
+                data:{imgurl:imgurl},
+                url:"{:url('cate/delimg')}",
+                success:function(data){                    
+                    $("#cate_img").html('');
+                    $("#hidden_img").val('');
+                }
+
+            });
+    }
+
+    function delimg2(o){
+         
+         var imgurl=$("#hidden_img").val();
+         console.log(imgurl)         
+          $.ajax({
+                type:"post",
+                dataType:"json",
+                data:{imgurl:imgurl},
+                url:"{:url('cate/delimg2')}",
+                success:function(data){                    
+                    $("#cate_img").html('');
+                    $("#hidden_img").val('');
+                }
+
+            });
+    }
+    </script>
+    <!--百度编辑器-->
+    <script type="text/javascript" src="{$Think.config.__STATIC__}/admin/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="{$Think.config.__STATIC__}/admin/ueditor/ueditor.all.min.js"></script>
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/head"}
+
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+           {include file="common/left"}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="#">系统</a>
+                    </li>
+                                        <li>
+                        <a href="#">栏目管理</a>
+                    </li>
+                                        <li class="active">栏目修改</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+            <div class="widget-main ">
+                <div class="tabbable">
+                    <ul class="nav nav-tabs tabs-flat" id="myTab11">
+                        <li class="active">
+                            <a data-toggle="tab" href="#home11">
+                               基本信息
+                            </a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#profile11">
+                               栏目内容
+                            </a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#profile12">
+                                SEO配置
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content tabs-flat">
+                        <div id="home11" class="tab-pane active">
+                            <div class="widget-body">
+                                <div id="horizontal-form">
+
+                                    <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">所属模型</label>
+                                            <div class="col-sm-6">
+                                                <select name="cate_model" style="width: 100%;">
+                                                    <option selected="selected" value="text">文章模型</option>
+                                                  
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">栏目名称</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control"  value="{$cates['cate_name']}" name="cate_name" required="" type="text">
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">上级栏目</label>
+                                            <div class="col-sm-6">
+                                                <select name="cate_pid" style="width: 100%;">
+                                                    <option selected="selected" value="0">请选择</option>
+                                                  {volist name="cateres" id="vo"}
+                                                  <option  value="{$vo['cate_id']}">{php}if($vo['cate_pid']!=0){echo 'L'.str_repeat('-',$vo['level']*3);}{/php}{$vo['cate_name']}</option>
+                                                  {/volist}
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">栏目图片</label>
+                                            <div class="col-sm-3">
+                                                <span id="uploadify"></span>
+                                                <input id="hidden_img" value="{if($cates['cate_img']!='')}{$cates['cate_img']}{/if}"  name="cate_img"  type="hidden">
+                                            </div>
+                                            <div class="col-sm-3" id="cate_img">     
+                                            {if($cates['cate_img']!='')}
+                                            <img src="http://127.0.0.1/cms/public{$cates['cate_img']}" width='80px' height='80px'/>&nbsp;&nbsp;<a class='btn btn-azure' onclick='delimg2(this)'>撤销</a>
+                                            {/if}                                           
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">栏目类型</label>
+                                            <div class="col-sm-1">
+
+                                                <div class="radio">
+                                                    <label>
+                                                        <input name="cate_type" value="1" class="inverted" type="radio" {if($cates['cate_type']==1)}checked="checked"{/if}>
+                                                        <span class="text">列表类型</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1">
+
+                                                <div class="radio">
+                                                    <label>
+                                                        <input name="cate_type" value="2" class="inverted" type="radio" {if($cates['cate_type']==2)}checked="checked"{/if}>
+                                                        <span class="text">封面类型</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+                                       
+
+                                     <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">是否显示</label>
+                                            <div class="col-sm-1">
+
+                                                <div class="radio">
+                                                    <label>
+                                                        <input name="cate_ison" value="1" class="inverted" type="radio" {if($cates['cate_ison']==1)}checked="checked"{/if}>
+                                                        <span class="text">是</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1">
+
+                                                <div class="radio">
+                                                    <label>
+                                                        <input name="cate_ison" value="0" class="inverted" type="radio" {if($cates['cate_ison']==0)}checked="checked"{/if}>
+                                                        <span class="text">否</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label  class="col-sm-2 control-label no-padding-right">排序</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control"  value="{$cates['cate_sort']}" name="cate_sort" required="" type="text">
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+
+                                    <div class="form-group">
+                                <label  class="col-sm-2 control-label no-padding-right">列表模板</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control"  placeholder="" name="cate_template_list" required="" value="{$cates['cate_template_list']}" type="text">
+                                </div>
+                                <p class="help-block col-sm-4 red">* 必填</p>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-2 control-label no-padding-right">封面模板</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control"  placeholder="" name="cate_template_content" required="" value="{$cates['cate_template_content']}" type="text">
+                                </div>
+                                <p class="help-block col-sm-4 red">* 必填</p>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-2 control-label no-padding-right">内容页模板</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control"  placeholder="" name="cate_template_article" value="{$cates['cate_template_article']}" required="" type="text">
+                                </div>
+                                <p class="help-block col-sm-4 red">* 必填</p>
+                            </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="profile11" class="tab-pane">
+                           <textarea id="cate_content" name="cate_content">{$cates['cate_content']}</textarea>
+                        </div>
+                        <div id="profile12" class="tab-pane">
+                            <div class="form-group">
+                                <label  class="col-sm-2 control-label no-padding-right">栏目标题</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control"  placeholder="" name="cate_seo_title"  value="{$cates['cate_seo_title']}" type="text">
+                                </div>
+                                <p class="help-block col-sm-4 red">* 必填</p>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-2 control-label no-padding-right">栏目关键字</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control"  placeholder="" name="cate_seo_keywords" value="{$cates['cate_seo_keywords']}"  type="text">
+                                </div>
+                                <p class="help-block col-sm-4 red">* 必填</p>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-2 control-label no-padding-right">栏目描述</label>
+                                <div class="col-sm-6">
+                                   <textarea cols="120" rows="20" name="cate_seo_description">{$cates['cate_seo_description']}</textarea>
+                                </div>
+                                <p class="help-block col-sm-4 red">* 必填</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="cate_id" value="{$cates['cate_id']}">
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">保存信息</button>
+                </div>
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+    
+    <script src="{$Think.config.__STATIC__}/admin/style/bootstrap.js"></script>
+    
+    <!--Beyond Scripts-->
+    <script src="{$Think.config.__STATIC__}/admin/style/beyond.js"></script>
+
+    <script type="text/javascript">
+        UE.getEditor('cate_content',{    //content为要编辑的textarea的id
+            initialFrameWidth: 900,   //初始化宽度
+            initialFrameHeight: 500,   //初始化高度
+        });
+    </script>
+
+
+</body></html>
